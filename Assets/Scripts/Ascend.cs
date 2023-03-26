@@ -9,6 +9,7 @@ public class Ascend : MonoBehaviour
     public GameObject player;
     public TextMeshProUGUI ascendText;
     public int check = 0;
+    public AudioSource hatch;
 
     private bool playerInRange;
 
@@ -25,6 +26,7 @@ public class Ascend : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerInRange == true)
         {
+            hatch.Play();
             ascendText.text = "";
             check++;
             if(check == 1)

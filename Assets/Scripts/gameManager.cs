@@ -11,6 +11,7 @@ public class gameManager : MonoBehaviour
     public GameObject[] Pipes;
     public bool miniGameCompleted = false;
     public GameObject pipMiniGame;
+    public AudioSource gameComplete;
 
     public int correctedPipes = 0;
 
@@ -38,6 +39,7 @@ public class gameManager : MonoBehaviour
 
         if(correctedPipes == totalPipes)
         {
+            gameComplete.Play();
             Debug.Log("You win!");
             miniGameCompleted = true;
             pipMiniGame.SetActive(false);
