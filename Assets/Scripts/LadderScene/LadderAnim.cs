@@ -33,7 +33,7 @@ public class LadderAnim : MonoBehaviour
         }
         Debug.Log("Test");
         yield return new WaitForSeconds(5);
-        GameObject.Find("GameManager").GetComponent<LoadNextScene>().LoadScene("Level2");
+        GameObject.Find("GameManager").GetComponent<LoadNextScene>().LoadScene("SampleScene");
     }
 
     IEnumerator ReturnToSub2()
