@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 34648944}
   - component: {fileID: 34648945}
   - component: {fileID: 34648946}
+  - component: {fileID: 34648947}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -278,6 +279,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+--- !u!114 &34648947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34648943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d853baf8b67e104795659bc15fdaca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJson1: {fileID: 4900000, guid: 7d4649794817c4636ad316f47e83752b, type: 3}
+  inkJson2: {fileID: 4900000, guid: 4671a9a8783484db896b0f833b19b1af, type: 3}
+  inkJson3: {fileID: 4900000, guid: b3fe0131004194e1c8cfc67561461491, type: 3}
+  inkJson4: {fileID: 4900000, guid: dd223dd8280cd4e42b60be0ec61422d2, type: 3}
+  inkJson5: {fileID: 4900000, guid: 934097f28d55a445982b7592ebffa0f6, type: 3}
+  encounter: 1
 --- !u!1 &42851172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,7 +4250,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600807784}
-  m_LocalRotation: {x: 0.077481076, y: 0.7150874, z: -0.080289714, w: 0.69007266}
+  m_LocalRotation: {x: 0.077481076, y: 0.7150874, z: -0.08028972, w: 0.69007266}
   m_LocalPosition: {x: -30.86, y: 2.85, z: 1.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4478,7 +4497,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706985160}
-  m_LocalRotation: {x: 0.020879604, y: 0.23667288, z: -0.0050873808, w: 0.97135174}
+  m_LocalRotation: {x: 0.020879604, y: 0.23667286, z: -0.0050873803, w: 0.97135174}
   m_LocalPosition: {x: -23.23, y: -3.36, z: -64.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
