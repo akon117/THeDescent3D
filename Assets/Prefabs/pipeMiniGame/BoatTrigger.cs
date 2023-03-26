@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class BoatTrigger : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class BoatTrigger : MonoBehaviour
     private bool ending;
     public GameObject endScene;
 
+    public TextMeshProUGUI UItext;
+
     private void Awake()
     {
         if(pipManager.miniGameCompleted)
@@ -26,7 +30,7 @@ public class BoatTrigger : MonoBehaviour
         }
 
         playerInRange = false;
-        //visualCue.SetActive(false);
+        UItext.text = "";
     }
 
     private void Update()
@@ -34,6 +38,7 @@ public class BoatTrigger : MonoBehaviour
         if (playerInRange)
         {
             //visualCue.SetActive(true);
+            UItext.text = "press E to interact";
             if (Input.GetKeyDown(KeyCode.E)) //<---InputManager.GetInstance().GetInteractPressed()
             {
                 Debug.Log("Boat button pressed!");
@@ -68,6 +73,7 @@ public class BoatTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            UItext.text = "press E to interact";
             playerInRange = true;
             Debug.Log("player enter");
         }
@@ -77,6 +83,7 @@ public class BoatTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            UItext.text = "";
             playerInRange = false;
             Debug.Log("player exit");
         }
