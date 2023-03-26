@@ -12,11 +12,11 @@ public class LadderAnim : MonoBehaviour
     {
         if (GameObject.Find("GameManager").GetComponent<LevelTracker>().level == 2)
         {
-            StartCoroutine(ReturnToSub1());
+            StartCoroutine(ReturnToSub2());
         }
         else
         {
-            StartCoroutine(ReturnToSub2());
+            StartCoroutine(ReturnToSub1());
         }
     }
 
