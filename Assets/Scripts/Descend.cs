@@ -45,7 +45,7 @@ public class Descend : MonoBehaviour
 
     IEnumerator LoadLadder()
     {
-        GameObject.Find("GameManager").GetComponent<LevelTracker>().level = 2;
+        GameObject.Find("GameManager").GetComponent<LevelTracker>().floor = 2;
         yield return new WaitForSeconds(5);
         GameObject.Find("GameManager").GetComponent<LoadNextScene>().LoadScene("Ladder");
     }

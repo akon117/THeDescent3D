@@ -24,7 +24,7 @@ public class Ascend : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerInRange == true)
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange == true && GameObject.Find("pipManager").GetComponent<gameManager>().miniGameCompleted)
         {
             hatch.Play();
             ascendText.text = "";
@@ -40,7 +40,7 @@ public class Ascend : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && GameObject.Find("pipManager").GetComponent<gameManager>().miniGameCompleted)
         {
             playerInRange = true;
             ascendText.text = "Press 'E' to Ascend";
@@ -58,7 +58,7 @@ public class Ascend : MonoBehaviour
 
     IEnumerator LoadLadder()
     {
-        GameObject.Find("GameManager").GetComponent<LevelTracker>().level = 1;
+        GameObject.Find("GameManager").GetComponent<LevelTracker>().floor = 1;
         yield return new WaitForSeconds(5);
         GameObject.Find("GameManager").GetComponent<LoadNextScene>().LoadScene("Ladder");
     }

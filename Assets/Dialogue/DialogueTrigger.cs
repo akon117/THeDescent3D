@@ -16,6 +16,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         playerInRange = false;
         visualCue.SetActive(false);
+        inkJson = GameObject.Find("GameManager").GetComponent<dialogue>().currentJson;
     }
 
     private void Update()

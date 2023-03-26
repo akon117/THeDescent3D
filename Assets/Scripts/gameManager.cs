@@ -40,6 +40,7 @@ public class gameManager : MonoBehaviour
         if(correctedPipes == totalPipes)
         {
             gameComplete.Play();
+            GameObject.Find("GameManager").GetComponent<LevelTracker>().level++;
             Debug.Log("You win!");
             miniGameCompleted = true;
             pipMiniGame.SetActive(false);

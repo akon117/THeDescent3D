@@ -10,7 +10,7 @@ public class LadderAnim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GameObject.Find("GameManager").GetComponent<LevelTracker>().level == 2)
+        if (GameObject.Find("GameManager").GetComponent<LevelTracker>().floor == 2)
         {
             StartCoroutine(ReturnToSub2());
         }

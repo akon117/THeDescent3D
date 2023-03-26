@@ -28,7 +28,7 @@ public class ladderTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && GameObject.Find("pipManager").GetComponent<gameManager>().miniGameCompleted)
         {
             UItext.text = "press E to Ascend";
             playerInRange = true;
