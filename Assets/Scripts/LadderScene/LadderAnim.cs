@@ -13,9 +13,9 @@ public class LadderAnim : MonoBehaviour
 
     IEnumerator ReturnToSub()
     {
-        GameObject.Find("GameManager").GetComponent<GameManager>().returnFromLadder();
+        //GameObject.Find("GameManager").GetComponent<GameManager>().returnFromLadder();
         //GameObject.Find("Player").GetComponent<PlayerPosition>().secondLevel();
         yield return new WaitForSeconds(5);
-        GameObject.Find("GameManager").GetComponent<LoadNextScene>().LoadScene("SampleScene");
+        GameObject.Find("GameManager").GetComponent<LoadNextScene>().LoadScene("Level2");
     }
 }
