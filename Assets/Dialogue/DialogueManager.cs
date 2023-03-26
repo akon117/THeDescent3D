@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueComplete = false;
 
+    public AudioSource button;
+
     private static DialogueManager instance;
 
     private void Awake()
@@ -52,6 +54,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+        button.Play();
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);

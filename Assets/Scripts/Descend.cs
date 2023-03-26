@@ -9,11 +9,13 @@ public class Descend : MonoBehaviour
     public GameObject player;
     public TextMeshProUGUI descendText;
     public int check = 0;
+    public AudioSource hatch;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && descendText.text == "Press 'E' to Descend")
         {
+            hatch.Play();
             descendText.text = "";
             check++;
             if(check == 1)
