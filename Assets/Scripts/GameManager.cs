@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
-    public GameObject ReturnTrigger;
+    //public GameObject ReturnTrigger;
 
     public GameObject pipeHolder;
     public GameObject[] Pipes;
@@ -55,7 +55,7 @@ public class gameManager : MonoBehaviour
             {
                 pipMiniGame.SetActive(false);
                 //GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 6f;
-                ReturnTrigger.SetActive(true);
+                //ReturnTrigger.SetActive(true);
                 //ending = GameObject.Find("SceneManager").GetComponent<sceneStart>().isEnd;
                 // if(ending){
                 //     endScene.SetActive(true);
