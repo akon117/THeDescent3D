@@ -12,7 +12,7 @@ public class StartGame : MonoBehaviour
     IEnumerator StartGameCo()
     {
         GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
-        yield return new WaitForSeconds(5);
-        GameObject.Find("Main Camera").GetComponent<LoadNextScene>().LoadScene("SampleScene");
+        yield return new WaitForSeconds(2);
+        GameObject.Find("EventSystem").GetComponent<LoadNextScene>().LoadScene("SampleScene");
     }
 }
