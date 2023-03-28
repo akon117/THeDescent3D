@@ -38,9 +38,10 @@ public class BoatTrigger : MonoBehaviour
         if (playerInRange)
         {
             //visualCue.SetActive(true);
-            UItext.text = "press E to interact";
+            //UItext.text = "press E to interact";
             if (Input.GetKeyDown(KeyCode.E)) //<---InputManager.GetInstance().GetInteractPressed()
             {
+                UItext.text = "";
                 Debug.Log("Boat button pressed!");
                 if(pipManager.miniGameCompleted == false){
                     pipMiniGame.SetActive(true);
@@ -71,7 +72,7 @@ public class BoatTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !GameObject.Find("pipManager").GetComponent<gameManager>().miniGameCompleted)
         {
             UItext.text = "press E to interact";
             playerInRange = true;
